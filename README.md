@@ -1,7 +1,63 @@
-# 1.Overview
-The goal of this project is  to predict next-day stock direction (Up/Down) using technical indicators.
+# Stock Market Prediction
+## 1.Overview
+This project aims to predict stock market movements using machine learning techniques on historical stock market data. The system is trained on historical data and can predict future stock prices based on patterns identified in the data. The goal of this project is  to predict next-day stock direction (Up/Down) using technical indicators.
 
-# 2.Process
+## 2.Project Components
+
+### 2.1 Exploratory Data Analysis (EDA)
+File: `eda.ipynb`
+
+This notebook contains comprehensive data exploration including:
+- Data cleaning and preprocessing
+- Statistical analysis of historical stock prices
+- Visualization of price trends over time
+- Correlation analysis between different stock metrics
+- Feature distribution analysis
+- Time series decomposition to identify seasonal patterns
+
+### 2.2 Prediction Models
+File: `stock-market-prediction.ipynb`
+
+This notebook implements various prediction techniques:
+- Multiple regression models for price prediction
+- Feature engineering to improve prediction accuracy
+- Time series forecasting models
+- Model evaluation using metrics like RMSE, MAE, and R²
+- Visualization of predicted vs actual prices
+
+## 3.Dataset
+
+The data of this project is open source historical stock market data of five major Big Tech companies: NVIDIA (NVDA), Apple (AAPL), Microsoft (MSFT), Google (GOOGL), and Amazon (AMZN) over a 15 years from January 1, 2010 to January 1, 2025. The dataset can be accessed from [Kaggle](https://www.kaggle.com/datasets/marianadeem755/stock-market-data). Features include:
+- Date
+- Open, High, Low, Close prices
+- Adjusted closing prices
+- Trading volume
+
+## 4.Technologies Used
+- Python 3
+- Pandas & NumPy for data manipulation
+- Matplotlib & Seaborn for data visualization
+- Scikit-learn for machine learning models
+- Jupyter Notebooks for interactive development
+
+## 5.How to Use
+
+1. Clone this repository:
+```
+git clone https://github.com/anasiadan/Stock-Market-Prediction-Project.git
+```
+
+2. Install required dependencies:
+```
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter
+```
+
+3. Open and run the notebooks in order:
+   - First `eda.ipynb` to understand the data
+   - Then `stock-market-prediction.ipynb` to see the prediction models
+
+## 6.Results
+
 ### EDA Insights Summary
 The exploratory data analysis of the stock market dataset revealed several important patterns. The closing price trends show that most technology stocks, including Apple, Amazon, Microsoft, Google, and NVIDIA, have followed a strong long-term upward trajectory, with notable events like the COVID-19 market dip clearly visible. Correlation analysis indicated that these stocks are highly positively correlated, moving largely in the same direction, which suggests that sector or market-wide dynamics play a major role. Volume analysis revealed that trading activity spikes sharply during periods of market volatility, making volume a potentially powerful feature for predicting unusual market behavior. Moving average plots demonstrated how smoothing techniques can highlight underlying trends and possible trend reversals, offering opportunities for feature engineering using crossover signals. Finally, volatility analysis showed that while most trading days are relatively stable, there are occasional extreme spikes, typically during market shocks, that could be important for modeling risk.
 
@@ -13,9 +69,15 @@ Based on these insights, the following actionable steps are recommended:
 - Model volatility explicitly by creating features that capture large intraday price movements or sudden changes in trading volume.
 - Consider sector-wide indicators (like tech sector ETFs) to enhance predictions based on broader market behavior.
 
-# 3.Tools and methods used
+### Predictions
 
-# 4.Data
-- The data of this project is open source historical stock market data of five major Big Tech companies: NVIDIA (NVDA), Apple (AAPL), Microsoft (MSFT), Google (GOOGL), and Amazon (AMZN) over a 15 years from January 1, 2010 to January 1, 2025. Data source can be found in [Kaggle](https://www.kaggle.com/datasets/marianadeem755/stock-market-data).
+The project successfully implements stock price prediction with various models, with the best model achieving reasonable accuracy on test data. Detailed performance metrics and visualizations can be found in the prediction notebook.
 
-# 5.Results
+## Future Improvements
+- Implement deep learning approaches (LSTM, GRU)
+- Incorporate market sentiment analysis from news
+- Add technical indicators as additional features
+- Develop a real-time prediction system
+
+## License
+Open source under the MIT License.
