@@ -71,13 +71,24 @@ Based on these insights, the following actionable steps are recommended:
 
 ### Predictions
 
-The project successfully implements stock price prediction with various models, with the best model achieving reasonable accuracy on test data. Detailed performance metrics and visualizations can be found in the prediction notebook.
+Both Random Forest and XGBoost models achieved negative R² scores across all companies, with XGBoost consistently outperforming Random Forest (AAPL: -0.169 vs -0.256, AMZN: -0.178 vs -0.666, MSFT: -0.565 vs -0.696). Trading strategies dramatically underperformed buy-and-hold, with ML strategies producing significant losses in most cases (AMZN: -66% RF, NVDA: -66% XGB). Microsoft was the sole exception with positive ML returns (RF: 27%, XGB: 22%), though these still underperformed buy-and-hold's 54%. NVIDIA's extraordinary 509% buy-and-hold return proved insurmountable for ML models.
+Win rates clustered around 46-47%, indicating no better than random directional prediction. Sharpe ratios confirmed poor risk-adjusted performance with all ML strategies showing negative values while buy-and-hold achieved the best ratios.
 
-## Future Improvements
-- Implement deep learning approaches (LSTM, GRU)
-- Incorporate market sentiment analysis from news
-- Add technical indicators as additional features
-- Develop a real-time prediction system
+#### Key takeaways:
+- Daily return prediction using technical indicators alone proved insufficient for profitable trading.
+- Strong trending markets heavily favor buy-and-hold strategies.
+- Current feature set requires enhancement with fundamental data.
+- Consider longer prediction horizons for improved performance.
+- Results validate market efficiency in short-term price movements
+
+
+#### Next Steps:
+- Implement time series models (LSTM, GRU) to capture sequential dependencies and long-term patterns.
+- Integrate fundamental data (earnings, revenue, P/E ratios) and alternative data sources (news sentiment, social media trends).
+- Test longer prediction horizons (weekly/monthly) where technical patterns may be more reliable.
+- Implement market regime detection to apply strategies only during optimal conditions.
+- Develop ensemble models combining multiple prediction timeframes and architectures.
+- Test on different market conditions and sectors to validate model robustness.
 
 ## License
 Open source under the MIT License.
