@@ -1,11 +1,11 @@
 # Stock Market Prediction
 ## 1.Overview
-This project aims to predict stock market movements using machine learning techniques on historical stock market data. The system is trained on historical data and can predict future stock prices based on patterns identified in the data. The goal of this project is  to predict next-day stock direction (Up/Down) using technical indicators.
+This project aims to predict stock market movements using machine learning techniques on historical stock market data. The system is trained on historical data and can predict future stock prices based on patterns identified in the data. The goal of this project is to predict next-day stock direction (Up/Down) using technical indicators.
 
 ## 2.Project Components
 
 ### 2.1 Exploratory Data Analysis (EDA)
-File: `eda.ipynb`
+File: `stock-market-eda.ipynb`
 
 This notebook contains comprehensive data exploration including:
 - Data cleaning and preprocessing
@@ -53,7 +53,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn jupyter
 ```
 
 3. Open and run the notebooks in order:
-   - First `eda.ipynb` to understand the data
+   - First `stock-market-eda.ipynb` to understand the data
    - Then `stock-market-prediction.ipynb` to see the prediction models
 
 ## 6.Results
